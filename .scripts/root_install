@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# installs without nvidia drivers
+
+echo 'ParallelDownloads = 5' >> /etc/pacman.conf
+pacman -Sy zsh doas git wget curl
+useradd -m -G adm,wheel -s /bin/zsh liaml
+echo '### ENTER PASSWORD FOR liaml ###'
+passwd liaml
+
+pacman -Syu
+echo 'permit persist :wheel as root' > /etc/doas.conf
+
+pacman -Sy dhcpcd networkmanager network-manager-applet
+systemctl enable sshd
+systemctl enable dhcpcd
+systemctl enable NetworkManager
+
+echo '### INSTALLING YAY FOR AUR ###'
+cd /tmp
+pacman -Sy git gcc make automake autoconf man-db fakeroot
+mkdir Sources
+cd Sources
+git clone https://aur.archlinux.org/yay.git
+cd yay
+
+echo '### LOWER PRIVILEGES ###'
+su liaml
+makepkg -si
+
+yay -Syu
+exit
+
+cd /tmp
+
+echo '### XORG ###'
+systemctl enable fstrim.timer
+
+pacman -Sy xorg-server xorg-apps xorg-xinit \ 
+    i3-gaps i3blocks i3status i3lock xorg-font-util patch ;
+
+pacman -Sy noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont
+pacman -Sy ttf-liberation ttf-droid ttf-roboto terminus-font
+
+pacman -Sy alacritty ranger dmenu --needed
+
+pacman -Sy picom vlc flameshot neofetch keepassxc \
+	feh zip unzip ffmpeg rclone ntfs-3g firefox --needed ;
+
+pacman -Sy alsa-utils alsa-firmware pulseaudio
+
+pacman -Sy --needed bash curl gawk gnupg cronie p7zip gzip
+curl -L git.io/hosty | sh
+systemctl enable cronie
+systemctl start cronie
+hosty
+
+pacman -S fuse2
+doas pacman -S discord
+
+doas pacman -Sy libdbus pkg-config
+echo '### LOWER PRIVILEGES ###'
+su liaml
+
+curl -L https://github.com/rauenzi/BetterDiscordAddons/blob/master/Plugins/DoNotTrack/DoNotTrack.plugin.js
+mkdir --parent /home/liaml/.config/BetterDiscord/plugins
+cp DoNotTrack/DoNotTrack.plugin.js /home/liaml/.config/BetterDiscord/plugins
+
+yay -Sy mullvad-vpn
+yay -Sy vscodium github-cli spotify spotify-tui
+yay -Sy nerd-fonts-complete
+
+echo '### ZSH ###'
+doas sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo '### FINISHED ###'
+echo '>> remember to download betterdiscord, the plugins are already there'
+
+echo '### CHECKING OUT DOTFILES ###'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# git clone https://github.com/l1mey112/arch-dots.git --bare $HOME/.dotfiles/
+config checkout
