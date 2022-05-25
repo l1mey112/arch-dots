@@ -11,3 +11,19 @@ convert -blur 0x4 /tmp/locking_screen.png /tmp/screen_blur.png
 i3lock -e -u -i /tmp/screen_blur.png
 
 revert
+
+sudo pacman -S --needed bash curl gawk gnupg cronie p7zip gzip
+curl -L git.io/hosty | sh
+
+# /etc/hosty/blacklist.sources
+# https://astrolince.com/hosty/
+
+https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt
+https://www.github.developerdan.com/hosts/lists/facebook-extended.txt
+https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt
+https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt
+https://zonefiles.io/f/compromised/domains/full/
+https://pgl.yoyo.org/adservers/serverlist.php?hostformat=plain;showintro=0
+https://easylist.to/easylist/easyprivacy.txt
+https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
+https://easylist.to/easylist/easylist.txt
