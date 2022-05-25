@@ -209,25 +209,27 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-bar {
-        status_command i3status
-        position top
-        separator_symbol "|"
-        font pango: DejaVu Sans Mono 12
+#bar {
+#        status_command i3status
+#        position top
+#        separator_symbol "|"
+#        font pango: DejaVu Sans Mono 12
+#
+#        colors {
+#		#background #7C7C54
+#                #statusline #9AFFB2
+#
+##		background #62B2A1
+#		background #111111
+#		statusline #15FF5D
+#		separator  #1D2B66
+#
+#                #separator #EEEEEE
+#                focused_workspace #FFFFFF #171717 #FFFFF
+#        }
+#}
 
-        colors {
-		#background #7C7C54
-                #statusline #9AFFB2
-
-#		background #62B2A1
-		background #111111
-		statusline #15FF5D
-		separator  #1D2B66
-
-                #separator #EEEEEE
-                focused_workspace #FFFFFF #171717 #FFFFF
-        }
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ##START THEMING WM
 
