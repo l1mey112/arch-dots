@@ -2,19 +2,22 @@
 
 # installs without nvidia drivers
 
+read '### MUST BE IN CHROOT ###'
+
 echo 'ParallelDownloads = 5' >> /etc/pacman.conf
 pacman -Sy zsh doas git wget curl
-useradd -m -G adm,wheel -s /bin/zsh liaml
+useradd -m -G adm,wheel -Sy /bin/zsh liaml
 echo '### ENTER PASSWORD FOR liaml ###'
 passwd liaml
 
 pacman -Syu
 echo 'permit persist :wheel as root' > /etc/doas.conf
 
-pacman -Sy dhcpcd networkmanager network-manager-applet
-systemctl enable sshd
-systemctl enable dhcpcd
+pacman -Sy NetworkManager nm-connection-editor
+
+systemctl disable systemd-networkd
 systemctl enable NetworkManager
+systemctl start NetworkManager
 
 echo '### INSTALLING YAY FOR AUR ###'
 cd /tmp
@@ -55,8 +58,8 @@ systemctl enable cronie
 systemctl start cronie
 hosty
 
-pacman -S fuse2
-doas pacman -S discord
+pacman -Sy fuse2
+doas pacman -Sy discord
 
 doas pacman -Sy libdbus pkg-config
 echo '### LOWER PRIVILEGES ###'

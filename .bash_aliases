@@ -6,7 +6,10 @@ alias utar="tar -xvzf"
 alias ztar="tar -cvzf"
 alias fm="xdg-open"
 
-alias archup="pacman -Syu && yay -Syu"
+alias archup="doas pacman -Syu && doas yay -Syu"
 alias archlog="journalctl -p 3 -b && systemctl --failed"
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias code='codium'
+alias sudo='doas'
