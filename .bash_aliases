@@ -13,3 +13,5 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias code='codium'
 alias sudo='doas'
+
+archpkg () { pacman -Ql $@ ; pacman -Qk $@ }
