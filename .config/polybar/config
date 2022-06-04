@@ -15,7 +15,7 @@ violet = #8e1eff
 ;-------------------------------------------------------------------------------;
 [bar/right]
 width = 100%
-height = 20
+height = 15
 fixed-center = false 
 
 background = ${colors.background}
