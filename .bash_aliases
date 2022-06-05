@@ -11,7 +11,8 @@ alias archlog="journalctl -p 3 -b && systemctl --failed"
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-alias code='codium'
-alias sudo='doas'
+# alias code='codium'
+# alias sudo='doas'
+# use symlinks
 
 archpkg () { pacman -Ql $@ ; pacman -Qk $@ }
