@@ -20,7 +20,7 @@ bindsym XF86MonBrightnessUp exec light -A 1
 bindsym XF86MonBrightnessDown exec light -U 1 
 # decrease screen brightness
 
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 smart_borders on
 
 gaps inner 12
