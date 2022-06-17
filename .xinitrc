@@ -5,5 +5,7 @@ xss-lock ~/.scripts/screen-lock +resetsaver &
 xset r rate 200 40
 # change key repeating speed
 
+dunst
+
 #picom --show-all-xerrors -b --config ~/.config/picom/picom.conf &
 exec i3 
