@@ -6,8 +6,9 @@ alias utar="tar -xvzf"
 alias ztar="tar -cvzf"
 alias fm="xdg-open"
 
-alias archup="doas pacman -Syu && doas pacman -Rns $(pacman -Qdtq) && yay -Syu"
+alias archup="doas pacman -Syu && yay -Syu"
 alias archlog="journalctl -p 3 -b && systemctl --failed"
+alias archclean="doas pacman -Rns $(pacman -Qdtq)"
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
