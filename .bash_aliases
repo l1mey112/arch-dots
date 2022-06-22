@@ -15,4 +15,3 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 configpush () { config pull ; config add $@ ; config commit -m "$(uname -n) --- $(date)" ; config push }
 source /usr/share/git/completion/git-completion.zsh
 __git_complete config __git_main
-
