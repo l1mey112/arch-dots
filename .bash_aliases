@@ -9,11 +9,10 @@ alias fm="xdg-open"
 alias archup="doas pacman -Syu && yay -Syu"
 alias archlog="journalctl -p 3 -b && systemctl --failed"
 alias archclean="doas pacman -Rns $(pacman -Qdtq)"
+archpkg () { pacman -Ql $@ ; pacman -Qk $@ }
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+configpush () { config pull ; config add $@ ; config commit -m "$(uname -n) --- $(date)" ; config push }
+source /usr/share/git/completion/git-completion.zsh
+__git_complete config __git_main
 
-# alias code='codium'
-# alias sudo='doas'
-# use symlinks
-
-archpkg () { pacman -Ql $@ ; pacman -Qk $@ }
