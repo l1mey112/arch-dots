@@ -13,7 +13,7 @@ archpkg () { pacman -Ql $@ ; pacman -Qk $@ }
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 configpush () { config pull ; config add $@ ; config commit -m "$(uname -n) --- $(date)" ; config push }
-source /usr/share/git/completion/git-completion.zsh
-__git_complete config __git_main
+source /usr/share/git/completion/git-completion.zsh &>/dev/null
+__git_complete config __git_main &>/dev/null
 
 stress () { for i in $(seq $(getconf _NPROCESSORS_ONLN)); do yes > /dev/null & done ; printf 'Press any key to stop...' ; read ; killall yes }
