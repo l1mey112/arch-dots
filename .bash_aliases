@@ -4,7 +4,7 @@ alias c="clear"
 alias e="exit"
 alias utar="tar -xvzf"
 alias ztar="tar -cvzf"
-alias ranger='. ranger'
+alias rr='. ranger'
 alias fm="xdg-open"
 
 alias archup="doas pacman -Syu && yay -Syu"
