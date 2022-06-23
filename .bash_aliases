@@ -17,3 +17,4 @@ source /usr/share/git/completion/git-completion.zsh &>/dev/null
 __git_complete config __git_main &>/dev/null
 
 stress () { for i in $(seq $(getconf _NPROCESSORS_ONLN)); do yes > /dev/null & done ; printf 'Press any key to stop...' ; read ; killall yes }
+alias rr=". ranger"
