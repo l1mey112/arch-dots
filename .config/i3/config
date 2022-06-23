@@ -23,6 +23,8 @@ bindsym XF86MonBrightnessDown exec light -U 1
 for_window [class=".*"] border pixel 2
 smart_borders on
 
+for_window [class="Alacritty" instance="Alacritty"] floating enable
+
 gaps inner 12
 gaps outer 0
 smart_gaps on
@@ -118,7 +120,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+q floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
