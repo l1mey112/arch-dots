@@ -1,0 +1,24 @@
+terminal=alacritty
+interm=ranger
+
+image:feh
+video:mpv
+audio:mpv
+text:codium
+
+.gif:mpv
+.pdf:$BROWSER
+.html:$BROWSER
+.json:codium
+
+# 4. Regexp
+# Match some protocols by default
+?'^http:\/\/':firefox
+?'^https:\/\/':firefox
+?'^www.':firefox
+?'^magnet:':deluge-gtk
+#?'^zoommtg:':zoom
+
+directory:ranger
+file://:ranger
+default:ranger
