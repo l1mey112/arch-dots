@@ -1,18 +1,33 @@
-# https://github.com/dchakro/alacritty_colors/blob/main/themes/darktooth.yml
-
-# Colors (Darktooth)
 TERM: xterm-256color
+
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+
+  bold:
+    family: SauceCodePro Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: monospace
+    style: Italic
+
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+
+  size: 11
 
 window:
   padding:
-    x: 20
-    y: 20
-
+    x: 10
+    y: 10
   dynamic_padding: true
 #  opacity: 1.0
 #  picom got this one
 font:
-  size: 9.0
+  size: 10.0
 
 selection:
   save_to_clipboard: true
@@ -22,45 +37,30 @@ cursor:
   blinking: Always
 
 colors:
-  # Default colors
+  name: Garuda (dr460nized)
+  author: dr460nf1r3
   primary:
-#    background: '#282828'
-#    foreground: '#fdf4c1'
-#    background: '#4a356d'
-    background: '#000000'
-    foreground: '#fdf4c1'
-
-  # Normal colors
-  # todo change RED?
-  # todo so it looks better in neofetch
+    background: '0x0a1124'
+    foreground: '0xeec49a'
+  cursor:
+    text: '0x0a1124'
+    cursor: '0xeec49a'
   normal:
-    black:   '#282828'
-    red:     '#9d0006'
-    green:   '#79740e'
-    yellow:  '#b57614'
-    blue:    '#076678'
-    magenta: '#8f3f71'
-    cyan:    '#00a7af'
-    white:   '#fdf4c1'
-
-  # Bright colors
+    black: '0x0a1124'
+    red: '0x5F4149'
+    green: '0xEB3247'
+    yellow: '0xBC4349'
+    blue: '0xF35645'
+    magenta: '0xF6A73B'
+    cyan: '0xFAD32F'
+    white: '0xeec49a'
   bright:
-    black:   '#32302f'
-    red:     '#fb4933'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#3fd7e5'
-    white:   '#ffffc8'
-
-  # Dim colors (Optional)
-  dim:
-    black:   '#1d2021'
-    red:     '#421e1e'
-    green:   '#232b0f'
-    yellow:  '#4d3b27'
-    blue:    '#2b3c44'
-    magenta: '#4e3d45'
-    cyan:    '#205161'
-    white:   '#f4e8ba'
+    black: '0xa6896b'
+    red: '0x5F4149'
+    green: '0xEB3247'
+    yellow: '0xBC4349'
+    blue: '0xF35645'
+    magenta: '0xF6A73B'
+    cyan: '0xFAD32F'
+    white: '0xeec49a'
+theme: Garuda.dr460nized
