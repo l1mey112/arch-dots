@@ -27,6 +27,7 @@ for_window [class="Alacritty" instance="Alacritty"] floating enable
 for_window [class="feh" instance="feh"] floating enable
 for_window [class="mpv" instance="gl"] floating enable
 for_window [class="notion-app-enhanced" instance="notion-app-enhanced"] floating enable
+for_window [class="Remote-viewer" instance="remote-viewer"] floating enable # qemu
 
 gaps inner 12
 gaps outer 0
