@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+
+import sys
+from time import sleep
+import pyautogui
+import pyperclip
+data = pyperclip.paste()
+
+sleep(2)
+#for word in data:
+#    pyautogui.write(word)
+#    sleep(0.05)
+pyautogui.write(data)
+print("done!")
