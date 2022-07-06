@@ -61,7 +61,7 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec alacritty --command '.scripts/rangercd'
-bindsym $mod+d exec "dmenu_run -b -nf '#4B1424' -nb '#ACFF9D' -sb '#4D57A1' -sf '#FFFFFF' -fn 'monospace-15' -p ';'"
+bindsym $mod+d exec "dmenu_run -nf '#CCCCCC' -nb '#000000' -sb '#4D57A1' -sf '#FFFFFF' -fn 'monospace-11'"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
