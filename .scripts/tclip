@@ -9,6 +9,6 @@ data = pyperclip.paste()
 sleep(2)
 #for word in data:
 #    pyautogui.write(word)
-#    sleep(0.05)
+#    sleep(0.005)
 pyautogui.write(data)
 print("done!")
