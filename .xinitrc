@@ -10,6 +10,6 @@ xset r rate 200 40
 dunst &
 pulseaudio -D &
 
-#picom --show-all-xerrors -b --config ~/.config/picom/picom.conf &
+hsetroot -solid '#111'
 
 exec i3 

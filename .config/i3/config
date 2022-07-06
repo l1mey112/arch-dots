@@ -26,11 +26,10 @@ for_window [class="mpv" instance="gl"] floating enable
 for_window [class="notion-app-enhanced" instance="notion-app-enhanced"] floating enable
 for_window [class="Remote-viewer" instance="remote-viewer"] floating enable # qemu
 
-gaps inner 12
+#gaps inner 12
+gaps inner 4
 gaps outer 0
 smart_gaps on
-
-#border_radius 8
 
 # inverse scrolling for touchpad (right way!)
 exec synclient --no-startup-id VertScrollDelta=111
@@ -191,7 +190,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# yes need!
+exec_always --no-startup-id picom
 
 # Window color settings
 # class                 border  backgr. text    indicator
