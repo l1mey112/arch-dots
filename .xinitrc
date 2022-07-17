@@ -5,7 +5,6 @@ fi
 xset s 200 &
 xss-lock ~/.scripts/screen-lock +resetsaver &
 xset r rate 200 40
-# change key repeating speed
 
 dunst &
 pulseaudio -D &
