@@ -1,7 +1,7 @@
 scan_timeout = 10
 add_newline = false
 
-format = "$directory $cmd_duration$character"
+format = "$battery$directory $cmd_duration$character"
 
 [character]
 success_symbol = ""
@@ -19,14 +19,15 @@ disabled = true
 #disabled = false
 #show_always = true
 
-#[battery]
-#full_symbol = "🔋 "
-#charging_symbol = "⚡️ "
-#discharging_symbol = "💀 "
-#
-#[[battery.display]]
-#threshold = 10
-#style = "bold red"
+[battery]
+format = "[$symbol$percentage]($style) "
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+
+[[battery.display]]
+threshold = 20
+style = "bold red"
 
 [directory]
 truncation_length = 5
