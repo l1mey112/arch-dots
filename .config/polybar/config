@@ -13,7 +13,7 @@ spotify = #1ed760
 
 [bar/right]
 width = 100%
-height = 18
+height = 22
 fixed-center = true 
 
 background = ${colors.background}
