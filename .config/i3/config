@@ -29,9 +29,9 @@ for_window [class="obsidian" instance="obsidian"] floating enable
 for_window [class="KeePassXC" instance="keepassxc"] floating enable
 
 #gaps inner 12
-gaps inner 4
-gaps outer 0
-smart_gaps on
+#gaps inner 4
+#gaps outer 0
+#smart_gaps on
 
 # inverse scrolling for touchpad (right way!)
 exec synclient --no-startup-id VertScrollDelta=111
@@ -196,10 +196,15 @@ exec_always --no-startup-id picom
 
 # Window color settings
 # class                 border  backgr. text    indicator
-client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
-client.unfocused        #2e3440 #1f222d #888888 #1f222d
-client.focused_inactive #2e3440 #1f222d #888888 #1f222d
-client.placeholder      #2e3440 #1f222d #888888 #1f222d
-client.urgent           #900000 #900000 #ffffff #900000
-
-client.background       #242424
+#client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
+#client.unfocused        #2e3440 #1f222d #888888 #1f222d
+#client.focused_inactive #2e3440 #1f222d #888888 #1f222d
+#client.placeholder      #2e3440 #1f222d #888888 #1f222d
+#client.urgent           #900000 #900000 #ffffff #900000
+#client.background       #242424
+client.focused          #000000 #000000 #000000 #000000
+client.unfocused        #000000 #000000 #000000 #000000
+client.focused_inactive #000000 #000000 #000000 #000000
+client.placeholder      #000000 #000000 #000000 #000000
+client.urgent           #000000 #000000 #000000 #000000
+client.background       #000000
