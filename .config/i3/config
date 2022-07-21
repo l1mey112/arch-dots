@@ -20,12 +20,12 @@ bindsym XF86MonBrightnessDown exec light -U 1
 for_window [class=".*"] border pixel 2
 smart_borders on
 
-for_window [class="Alacritty" instance="Alacritty"] floating enable
+#for_window [class="Alacritty" instance="Alacritty"] floating enable
 for_window [class="feh" instance="feh"] floating enable
 for_window [class="mpv" instance="gl"] floating enable
-for_window [class="notion-app-enhanced" instance="notion-app-enhanced"] floating enable
+#for_window [class="notion-app-enhanced" instance="notion-app-enhanced"] floating enable
 for_window [class="Remote-viewer" instance="remote-viewer"] floating enable # qemu
-for_window [class="obsidian" instance="obsidian"] floating enable
+#for_window [class="obsidian" instance="obsidian"] floating enable
 for_window [class="KeePassXC" instance="keepassxc"] floating enable
 
 #gaps inner 12
