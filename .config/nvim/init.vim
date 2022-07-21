@@ -81,7 +81,8 @@ vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
 
 set updatetime=300
-set cmdheight=2
+" set cmdheight=2
+set cmdheight=1
 set shortmess+=c
 if has("nvim-0.5.0") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
