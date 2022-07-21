@@ -9,6 +9,7 @@ xset r rate 200 40
 dunst &
 pulseaudio -D &
 
-hsetroot -solid '#111'
+#hsetroot -solid '#111'
+hsetroot -solid '#000'
 
 exec i3 
