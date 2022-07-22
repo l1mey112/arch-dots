@@ -7,6 +7,7 @@ alias ztar="tar -cvzf"
 alias fm="xdg-open"
 whereis () { echo "$(which $1)" }
 
+alias lsr="ls -r | tail -n 10"
 alias archup="doas pacman -Syu && yay -Syu"
 alias archlog="journalctl -p 3 -b && systemctl --failed"
 alias archclean="doas pacman -Rns $(pacman -Qdtq)"
