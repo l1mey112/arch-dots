@@ -825,7 +825,7 @@ key_bindings:
   # Highlight window damage information.
   #highlight_damage: false
 colors:
-  name: Cloud
+  name: Belge
   author: ""
   primary:
     background: "#000000"
@@ -834,21 +834,21 @@ colors:
     text: "#000000"
     cursor: "#ffffff"
   normal:
-    black: "#222827"
-    red: "#d5a8e3"
-    green: "#9c75dd"
-    yellow: "#9898ae"
-    blue: "#654a96"
-    magenta: "#625566"
-    cyan: "#a9d1df"
-    white: "#e6ebe5"
+    black: "#252525"
+    red: "#ef6769"
+    green: "#a6e22e"
+    yellow: "#fd971f"
+    blue: "#6495ed"
+    magenta: "#deb887"
+    cyan: "#b0c4de"
+    white: "#dbdcdc"
   bright:
-    black: "#5d6f74"
-    red: "#cd749c"
-    green: "#63b0b0"
-    yellow: "#c0c0dd"
-    blue: "#5786bc"
-    magenta: "#3f3442"
-    cyan: "#849da2"
-    white: "#d9d6cf"
-theme: Cloud
+    black: "#454545"
+    red: "#fc7ca5"
+    green: "#b6e354"
+    yellow: "#fd971f"
+    blue: "#87ceeb"
+    magenta: "#996600"
+    cyan: "#87ceeb"
+    white: "#fdfdfd"
+theme: Belge

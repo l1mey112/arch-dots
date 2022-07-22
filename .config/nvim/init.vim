@@ -24,6 +24,13 @@ let &t_ZR="\e[23m"
 let asmsyntax = "nasm"
 let filetype_i = "nasm"
 
+au BufRead,BufNewFile *.v,*.vsh set filetype=v
+au BufRead,BufNewFile *.asm set filetype=nasm
+
+let g:v_autofmt_bufwritepre = 0
+
+" lua require'lspconfig'.vls.setup{}
+
 " plugins
 
 call plug#begin()
@@ -46,6 +53,8 @@ call plug#begin()
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'neovim/nvim-lspconfig'
     Plug 'williamboman/nvim-lsp-installer'
+
+    Plug 'ollykel/v-vim'
 
     " Git
     Plug 'airblade/vim-gitgutter'
